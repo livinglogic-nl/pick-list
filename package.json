@@ -26,6 +26,7 @@
     "esbuild-jest": "^0.5.0",
     "jest": "^29.5.0",
     "pino": "^8.14.1",
+    "semantic-release": "^21.0.5",
     "typescript": "^5.0.4"
   }
 }
