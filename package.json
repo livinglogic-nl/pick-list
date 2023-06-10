@@ -9,7 +9,7 @@
     "require": "./dist/cjs/index.js"
   },
   "scripts": {
-    "build": "sh build.sh",
+    "build": "node build",
     "test": "jest"
   },
   "files": [
