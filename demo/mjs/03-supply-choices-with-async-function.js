@@ -3,7 +3,7 @@ import { quotes } from '../quotes.mjs';
 import { autoType } from '../auto-type.mjs';
 
 autoType([
-  'f', 'l', 'y', ' ', 'u', 'p',
+  ...'action'.split(''),
   { name:'backspace' },
   { name:'backspace' },
   { name:'backspace' },
@@ -15,7 +15,6 @@ try {
     await new Promise(ok => setTimeout(ok, 200));
     return quotes.filter(q => q.text.match(new RegExp(needle,'i')));
   },'text');
-  console.log(quote);
+  console.log(quote); // { text: 'Action is eloquence.' }
 } catch(e) {
-  console.log(e);
 }
