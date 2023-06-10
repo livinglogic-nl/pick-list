@@ -3,11 +3,10 @@ import { quotes } from '../quotes.mjs';
 import { autoType } from '../auto-type.mjs';
 
 autoType([
-  'f', 'l', 'y',
-  { name:'down' },
-  { name:'down' },
-  { name:'up' },
-  { name:'up' },
+  'f', 'l', 'y', ' ', 'u', 'p',
+  { name:'backspace' },
+  { name:'backspace' },
+  { name:'backspace' },
   { name:'return' },
 ]);
 

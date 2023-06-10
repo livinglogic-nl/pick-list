@@ -2,7 +2,9 @@ import { pickList } from '../../dist/mjs/index.js';
 import { autoType } from '../auto-type.mjs';
 
 autoType([
-  'z', 'z',
+  { name:'down' },
+  { name:'down' },
+  's',
   { name:'return' },
 ]);
 
@@ -14,6 +16,6 @@ try {
     { foodName:'lasagna' },
     { foodName:'babi pangang' },
   ], 'foodName');
-  console.log(answer); // { foodName: 'pizza' }
+  console.log(answer); // { foodName: 'sushi' }
 } catch(e) {
 }

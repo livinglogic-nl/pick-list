@@ -3,7 +3,9 @@
   const { autoType } = await import('../auto-type.mjs')
   
   autoType([
-    'z', 'z',
+    { name:'down' },
+    { name:'down' },
+    's',
     { name:'return' },
   ]);
   
@@ -15,7 +17,7 @@
       { foodName:'lasagna' },
       { foodName:'babi pangang' },
     ], 'foodName');
-    console.log(answer); // { foodName: 'pizza' }
+    console.log(answer); // { foodName: 'sushi' }
   } catch(e) {
   }
   

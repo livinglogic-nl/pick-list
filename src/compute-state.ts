@@ -36,6 +36,7 @@ export const useComputeState = (options:ComputeStateOptions):ComputeState => {
   }
 
   const updateFiltered = () => {
+    renderState.row = 0;
     renderState.filtered = fuzzy({
       needle: renderState.needle,
       choices: renderState.choices,

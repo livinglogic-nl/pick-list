@@ -1,8 +1,8 @@
 import child_process from 'child_process';
 import fs from 'fs';
 
-const demoModuleDir = 'demo/module/';
-const demoCommonjsDir = 'demo/commonjs/';
+const demoModuleDir = 'demo/mjs/';
+const demoCommonjsDir = 'demo/cjs/';
 
 const convertDemoFile = (module) => {
   let cnt = fs.readFileSync(demoModuleDir + module).toString();
@@ -19,8 +19,6 @@ ${cnt.split('\n').map(s => '  '+s).join('\n')}
 
   fs.writeFileSync(demoCommonjsDir + module, cnt);
 }
-
-
 
 child_process.execSync(`rm -rf ${demoCommonjsDir}`);
 fs.mkdirSync(demoCommonjsDir);

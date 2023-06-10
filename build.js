@@ -30,5 +30,7 @@ const buildModule = async() => {
 }
 
 passthru('rm -rf dist');
+
 await buildModule();
 await buildCommonjs();
+
