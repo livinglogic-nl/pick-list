@@ -16,7 +16,11 @@ const buildCommonjs = async() => {
 const buildModule = async() => {
   passthru('npx tsc --build tsconfig.json');
   const fixLocalImports = async() => {
-    const files = child_process.execSync('find dist/mjs -type f -name "*.js"').toString().trim().split('\n');
+    const files = child_process.execSync('find dist/mjs -type f')
+      .toString()
+      .trim()
+      .split('\n')
+      .filter(f => !f.endsWith('.map'))
     await Promise.all(files.map(async(f) => {
       const cnt = (await fs.promises.readFile(f)).toString();
       const fix = cnt.replaceAll(/import (.*?) from '(\..*?)'/g, (_,subject,file) =>
